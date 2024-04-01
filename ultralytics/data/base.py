@@ -289,7 +289,8 @@ class BaseDataset(Dataset):
                 return Compose([])
             ```
         """
-        raise NotImplementedError
+        return Compose([ToTensor()])
+        # raise NotImplementedError
 
     def get_labels(self):
         """
